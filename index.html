@@ -129,6 +129,7 @@
   .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
   .info p{display:flex;gap:12px;margin:14px 0;color:var(--muted)}
   .info b{color:var(--navy)}
+  .map{width:100%;height:260px;border:0;border-radius:var(--radius);margin-top:10px;background:var(--line)}
   .thanks{display:none;background:#e2f4ea;color:var(--green);padding:16px;border-radius:12px;font-weight:700}
 
   .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
@@ -306,7 +307,10 @@
       <h2>Фарзандингизни 192-мактабга ёзинг</h2>
       <p class="lead">Ариза қолдиринг — тез орада сиз билан боғланамиз.</p>
       <p>📍 <span><b>Манзил:</b> Тошкент ш., Шайхонтоҳур тумани</span></p>
+      <p>🧭 <span><b>Мўлжал:</b> Кўкча, «Кошона» тўйхонаси рўпарасида</span></p>
       <p>🕗 <span><b>Иш вақти:</b> Душанба – Шанба</span></p>
+      <iframe class="map" title="Харита: Кўкча, «Кошона» тўйхонаси" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=Ko%27kcha+Koshona+to%27yxonasi,+Shayxontohur,+Toshkent&z=16&output=embed"></iframe>
+      <a class="btn btn-gold" style="margin-top:14px" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Ko%27kcha+Koshona+to%27yxonasi,+Shayxontohur,+Toshkent">📍 Харитада очиш</a>
     </div>
     <form class="reveal" id="ariza" name="ariza" method="POST" data-netlify="true" netlify-honeypot="bot-field">
       <input type="hidden" name="form-name" value="ariza">
