@@ -9,6 +9,10 @@
 <meta property="og:title" content="192-мактаб — Шайхонтоҳур">
 <meta property="og:description" content="Тилларга ихтисослаштирилган ўрта махсус мактаб: 24/7 хавфсизлик, Face ID, олий тоифали устозлар, спорт тўгараклари.">
 <meta property="og:type" content="website">
+<link rel="alternate" hreflang="uz" href="https://zubayrabdullayev0110-dev.github.io/192-maktab/">
+<link rel="alternate" hreflang="ru" href="https://zubayrabdullayev0110-dev.github.io/192-maktab/ru/">
+<link rel="alternate" hreflang="en" href="https://zubayrabdullayev0110-dev.github.io/192-maktab/en/">
+<link rel="alternate" hreflang="x-default" href="https://zubayrabdullayev0110-dev.github.io/192-maktab/">
 <meta name="theme-color" content="#24493d">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2324493d'/%3E%3Ctext x='32' y='42' font-size='26' font-family='Arial' font-weight='900' text-anchor='middle' fill='%23ffc93c'%3E192%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -53,6 +57,13 @@
   .btn:active{transform:translate(2px,2px);box-shadow:2px 2px 0 var(--ink)}
   .btn-y{background:var(--yellow);color:var(--ink)}
   .btn-w{background:#fff;color:var(--ink)}
+  .lang-sw{display:flex;border:3px solid var(--ink);border-radius:12px;overflow:hidden;font-weight:900;font-size:13px;flex:none}
+  .lang-sw a{padding:7px 10px;background:#fff}
+  .lang-sw a+a{border-left:2px solid var(--ink)}
+  .lang-sw a:hover{background:#fff3b0}
+  .lang-sw a[aria-current]{background:var(--yellow)}
+  .logo,.btn{white-space:nowrap}
+  @media (max-width:1340px){.nav>.btn{display:none}.menu{font-size:14px}.menu a{padding:8px 9px}}
   .burger{display:none;background:var(--yellow);border:3px solid var(--ink);border-radius:10px;font-size:22px;width:46px;height:46px;cursor:pointer}
 
   .hero{padding:50px 0 70px}
@@ -177,6 +188,7 @@
     .menu{display:none;position:absolute;top:72px;left:0;right:0;background:var(--paper);border-bottom:3px solid var(--ink);flex-direction:column;padding:14px 20px}
     .menu.open{display:flex}
     .burger{display:block}
+    .lang-sw{margin-left:auto}
     .nav>.btn{display:none}
   }
   @media (max-width:620px){
@@ -189,6 +201,12 @@
     .tt-row .chip{grid-column:2;justify-self:start}
     .tt-lbl{font-size:42px}
     .apple{right:0}
+    .nav{gap:10px}
+    .logo{font-size:16px;gap:8px}
+    .logo small{display:none}
+    .logo-badge{width:42px;height:42px;font-size:14px}
+    .lang-sw a{padding:6px 7px}
+    .burger{width:42px;height:42px;font-size:20px;flex:none}
   }
 </style>
 </head>
@@ -207,6 +225,7 @@
       <a href="#oshxona">Ошхона</a>
       <a href="#aloqa">Алоқа</a>
     </nav>
+    <div class="lang-sw" aria-label="Тил / Язык / Language"><a href="./" hreflang="uz" aria-current="page">ЎЗ</a><a href="ru/" hreflang="ru">РУ</a><a href="en/" hreflang="en">EN</a></div>
     <a href="#aloqa" class="btn btn-y">Ариза қолдириш</a>
     <button class="burger" aria-label="Меню" aria-controls="menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
   </div>
@@ -219,7 +238,7 @@
         <div>
           <div class="date">Тилларга ихтисослаштирилган ўрта махсус мактаб</div>
           <h1>192-мактабга <span class="hand">хуш келибсиз!</span></h1>
-          <p>Шайхонтоҳур туманидаги олий тизимдаги мактаблардан бири. Хавфсиз муҳит, олий тоифали устозлар, инглиз ва рус тиллари ва спорт тўгараклари — фарзандингиз учун барчаси бир жойда.</p>
+          <p>Шайхонтоҳур туманидаги олий тизимдаги мактаблардан бири. Хавфсиз муҳит, олий тоифали устозлар, инглиз ва рус тиллари, спорт тўгараклари — фарзандингиз учун барчаси бир жойда.</p>
           <div class="actions">
             <a href="#aloqa" class="btn btn-y">✏️ Фарзандимни ёздириш</a>
             <a href="#kuzatuv" class="btn btn-w">Онлайн кузатув</a>
