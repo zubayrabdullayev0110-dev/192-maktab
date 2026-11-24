@@ -30,7 +30,7 @@ define( 'MAKTAB192_TEMPLATE', 'maktab192-full.php' );
  */
 function maktab192_defaults() {
 	return array(
-		'phone'        => '',
+		'phone'        => '+998 99 839 86 04',
 		'address'      => 'Toshkent sh., Shayxontohur tumani, Ko‘kcha, Qo‘rg‘oncha ko‘chasi',
 		'landmark'     => 'Ko‘kcha, «Koshona» to‘yxonasi ro‘parasida',
 		'hours'        => 'Dushanba – Shanba, 8:00 – 19:00',
