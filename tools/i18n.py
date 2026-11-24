@@ -160,6 +160,31 @@ T = [
     ('Rahmat! Arizangiz qabul qilindi. Tez orada bog‘lanamiz.', 'Спасибо! Ваша заявка принята. Мы скоро свяжемся с вами.', 'Thank you! Your application has been received. We will be in touch soon.'),
     ('© 2026 192-maktab · Shayxontohur tumani', '© 2026 Школа №192 · Шайхантахурский район', '© 2026 School No. 192 · Shaykhontohur district'),
     ('Bu bizning maktab — 192-sonli o‘rta maxsus maktab', 'Это наша школа — специализированная школа №192', 'This is our school — Specialized Secondary School No. 192'),
+    # --- FAQ ---
+    ('<span class="tagline">Ota-onalar so‘raydi</span>', '<span class="tagline">Родители спрашивают</span>', '<span class="tagline">Parents ask</span>'),
+    ('<h2>Ko‘p so‘raladigan <span class="mark">savollar</span></h2>', '<h2>Частые <span class="mark">вопросы</span></h2>', '<h2>Frequently asked <span class="mark">questions</span></h2>'),
+    ('<summary>Maktab qayerda joylashgan?</summary><p>Toshkent sh., Shayxontohur tumani, Ko‘kcha, Qo‘rg‘oncha ko‘chasi. Mo‘ljal: «Koshona» to‘yxonasi ro‘parasida.</p>',
+     '<summary>Где находится школа?</summary><p>г. Ташкент, Шайхантахурский район, Кукча, ул. Кургонча. Ориентир: напротив свадебного зала «Кошона».</p>',
+     '<summary>Where is the school?</summary><p>Qo‘rg‘oncha street, Ko‘kcha, Shaykhontohur district, Tashkent. Landmark: opposite the “Koshona” wedding hall.</p>'),
+    ('<summary>Maktab soat nechadan nechagacha ishlaydi?</summary><p>Dushanba – Shanba, soat 8:00 dan 19:00 gacha.</p>',
+     '<summary>Какой график работы школы?</summary><p>Понедельник – Суббота, с 8:00 до 19:00.</p>',
+     '<summary>What are the school hours?</summary><p>Monday – Saturday, from 8:00 to 19:00.</p>'),
+    ('<summary>Qaysi chet tillari o‘qitiladi?</summary><p>Ingliz va rus tillari chuqurlashtirilgan holda o‘qitiladi.</p>',
+     '<summary>Какие иностранные языки изучают?</summary><p>Английский и русский языки — углублённо.</p>',
+     '<summary>Which foreign languages are taught?</summary><p>English and Russian, both taught in depth.</p>'),
+    ('<summary>Qanday sport to‘garaklari bor?</summary><p>Karate, futbol, basketbol va shaxmat.</p>',
+     '<summary>Какие есть спортивные секции?</summary><p>Карате, футбол, баскетбол и шахматы.</p>',
+     '<summary>Which sports clubs are there?</summary><p>Karate, football, basketball and chess.</p>'),
+    ('<summary>Farzandim maktabga kelib-ketganini qanday bilaman?</summary><p>Face ID tizimi har bir o‘quvchining kelish va ketish vaqtini qayd etadi. Bu ma’lumot sizga har kuni yetkaziladi.</p>',
+     '<summary>Как я узнаю, что ребёнок пришёл и ушёл из школы?</summary><p>Система Face ID фиксирует время прихода и ухода каждого ученика. Эта информация поступает вам каждый день.</p>',
+     '<summary>How will I know my child arrived and left?</summary><p>The Face ID system records every student’s arrival and departure time. You receive this information every day.</p>'),
+    ('<summary>Farzandimni qanday yozdiraman?</summary><p>Quyidagi ariza varaqasini to‘ldiring yoki ish vaqtida maktabga bevosita tashrif buyuring.</p>',
+     '<summary>Как записать ребёнка?</summary><p>Заполните заявку ниже или приходите в школу в рабочее время.</p>',
+     '<summary>How do I enroll my child?</summary><p>Fill in the application form below or visit the school during working hours.</p>'),
+    # --- mobile quick bar ---
+    ('aria-label="Tezkor havolalar"', 'aria-label="Быстрые ссылки"', 'aria-label="Quick links"'),
+    ('📍 Yo‘l ko‘rsatish', '📍 Маршрут', '📍 Directions'),
+    ('✏️ Ariza</a>', '✏️ Заявка</a>', '✏️ Apply</a>'),
 ]
 
 SWITCH_UZ = '<a href="./" hreflang="uz" aria-current="page">UZ</a><a href="ru/" hreflang="ru">RU</a><a href="en/" hreflang="en">EN</a>'
