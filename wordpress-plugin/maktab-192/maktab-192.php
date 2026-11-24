@@ -33,7 +33,7 @@ function maktab192_defaults() {
 		'phone'        => '',
 		'address'      => 'Toshkent sh., Shayxontohur tumani, Ko‘kcha, Qo‘rg‘oncha ko‘chasi',
 		'landmark'     => 'Ko‘kcha, «Koshona» to‘yxonasi ro‘parasida',
-		'hours'        => 'Dushanba – Shanba',
+		'hours'        => 'Dushanba – Shanba, 8:00 – 19:00',
 		'lat'          => '41.3265223',
 		'lng'          => '69.1990431',
 		'notify_email' => '',

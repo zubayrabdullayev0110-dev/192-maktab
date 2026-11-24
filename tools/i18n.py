@@ -144,7 +144,7 @@ T = [
     ('<b>Mo‘ljal:</b> Ko‘kcha, «Koshona» to‘yxonasi ro‘parasida',
      '<b>Ориентир:</b> Кукча, напротив свадебного зала «Кошона»',
      '<b>Landmark:</b> Ko‘kcha, opposite the “Koshona” wedding hall'),
-    ('<b>Ish vaqti:</b> Dushanba – Shanba', '<b>Часы работы:</b> Понедельник – Суббота', '<b>Hours:</b> Monday – Saturday'),
+    ('<b>Ish vaqti:</b> Dushanba – Shanba, 8:00 – 19:00', '<b>Часы работы:</b> Понедельник – Суббота, 8:00 – 19:00', '<b>Hours:</b> Monday – Saturday, 8:00 – 19:00'),
     ('title="Xarita: 192-maktab"', 'title="Карта: школа №192"', 'title="Map: School No. 192"'),
     ('📍 Xaritada ochish', '📍 Открыть на карте', '📍 Open in Maps'),
     ('✏️ Ariza varaqasi', '✏️ Заявка', '✏️ Application form'),
