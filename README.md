@@ -1,3 +1,3 @@
-# 192-мактаб
+# 192-maktab
 
-Шайхонтоҳур туманидаги 192-мактаб веб-сайти. Битта `index.html` файл.
+Shayxontohur tumanidagi 192-maktab veb-sayti. Bitta `index.html` fayl.

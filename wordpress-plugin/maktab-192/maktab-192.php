@@ -1,7 +1,7 @@
 <?php
 /**
- * Plugin Name:       192-мактаб сайти
- * Description:       Шайхонтоҳур туманидаги 192-мактаб саҳифаси: [maktab192] шорткоди, тўлиқ саҳифа шаблони, созламалар ва ота-оналар аризалари.
+ * Plugin Name:       192-maktab sayti
+ * Description:       Shayxontohur tumanidagi 192-maktab sahifasi: [maktab192] shortkodi, to‘liq sahifa shabloni, sozlamalar va ota-onalar arizalari.
  * Version:           1.0.0
  * Requires at least: 6.0
  * Requires PHP:      7.4
@@ -20,7 +20,7 @@ define( 'MAKTAB192_URL', plugin_dir_url( __FILE__ ) );
 define( 'MAKTAB192_TEMPLATE', 'maktab192-full.php' );
 
 /* -------------------------------------------------------------------------
- * Созламалар
+ * Sozlamalar
  * ---------------------------------------------------------------------- */
 
 /**
@@ -31,9 +31,9 @@ define( 'MAKTAB192_TEMPLATE', 'maktab192-full.php' );
 function maktab192_defaults() {
 	return array(
 		'phone'        => '',
-		'address'      => 'Тошкент ш., Шайхонтоҳур тумани, Кўкча, Қўрғонча кўчаси',
-		'landmark'     => 'Кўкча, «Кошона» тўйхонаси рўпарасида',
-		'hours'        => 'Душанба – Шанба',
+		'address'      => 'Toshkent sh., Shayxontohur tumani, Ko‘kcha, Qo‘rg‘oncha ko‘chasi',
+		'landmark'     => 'Ko‘kcha, «Koshona» to‘yxonasi ro‘parasida',
+		'hours'        => 'Dushanba – Shanba',
 		'lat'          => '41.3265223',
 		'lng'          => '69.1990431',
 		'notify_email' => '',
@@ -87,9 +87,9 @@ add_action(
 add_action(
 	'admin_menu',
 	function () {
-		add_menu_page( '192-мактаб', '192-мактаб', 'manage_options', 'maktab192', 'maktab192_settings_page', 'dashicons-welcome-learn-more', 25 );
-		add_submenu_page( 'maktab192', 'Созламалар', 'Созламалар', 'manage_options', 'maktab192', 'maktab192_settings_page' );
-		add_submenu_page( 'maktab192', 'Аризалар', 'Аризалар', 'edit_posts', 'edit.php?post_type=maktab192_ariza' );
+		add_menu_page( '192-maktab', '192-maktab', 'manage_options', 'maktab192', 'maktab192_settings_page', 'dashicons-welcome-learn-more', 25 );
+		add_submenu_page( 'maktab192', 'Sozlamalar', 'Sozlamalar', 'manage_options', 'maktab192', 'maktab192_settings_page' );
+		add_submenu_page( 'maktab192', 'Arizalar', 'Arizalar', 'edit_posts', 'edit.php?post_type=maktab192_ariza' );
 	}
 );
 
@@ -103,23 +103,23 @@ function maktab192_settings_page() {
 	$o      = maktab192_options();
 	$page   = (int) get_option( 'maktab192_page_id' );
 	$fields = array(
-		'phone'        => array( 'Телефон рақам', 'Масалан: +998 71 123 45 67. Бўш бўлса, сайтда кўрсатилмайди.' ),
-		'address'      => array( 'Манзил', '' ),
-		'landmark'     => array( 'Мўлжал', '' ),
-		'hours'        => array( 'Иш вақти', '' ),
-		'lat'          => array( 'Харита: кенглик (lat)', '' ),
-		'lng'          => array( 'Харита: узунлик (lng)', '' ),
-		'notify_email' => array( 'Аризалар келадиган email', 'Бўш бўлса, сайт администратори email\'ига юборилади.' ),
-		'tg_token'     => array( 'Telegram бот токени', 'Ихтиёрий. @BotFather берган токен.' ),
-		'tg_chat'      => array( 'Telegram chat ID', 'Ихтиёрий. Аризалар шу чат ёки гуруҳга келади.' ),
+		'phone'        => array( 'Telefon raqam', 'Masalan: +998 71 123 45 67. Bo‘sh bo‘lsa, saytda ko‘rsatilmaydi.' ),
+		'address'      => array( 'Manzil', '' ),
+		'landmark'     => array( 'Mo‘ljal', '' ),
+		'hours'        => array( 'Ish vaqti', '' ),
+		'lat'          => array( 'Xarita: kenglik (lat)', '' ),
+		'lng'          => array( 'Xarita: uzunlik (lng)', '' ),
+		'notify_email' => array( 'Arizalar keladigan email', 'Bo‘sh bo‘lsa, sayt administratori email\'iga yuboriladi.' ),
+		'tg_token'     => array( 'Telegram bot tokeni', 'Ixtiyoriy. @BotFather bergan token.' ),
+		'tg_chat'      => array( 'Telegram chat ID', 'Ixtiyoriy. Arizalar shu chat yoki guruhga keladi.' ),
 	);
 	?>
 	<div class="wrap">
-		<h1>192-мактаб — созламалар</h1>
+		<h1>192-maktab — sozlamalar</h1>
 		<?php if ( $page && get_post( $page ) ) : ?>
-			<p>Мактаб саҳифаси: <a href="<?php echo esc_url( get_permalink( $page ) ); ?>" target="_blank" rel="noopener"><?php echo esc_html( get_permalink( $page ) ); ?></a></p>
+			<p>Maktab sahifasi: <a href="<?php echo esc_url( get_permalink( $page ) ); ?>" target="_blank" rel="noopener"><?php echo esc_html( get_permalink( $page ) ); ?></a></p>
 		<?php endif; ?>
-		<p>Саҳифани исталган жойга қўйиш учун шорткод: <code>[maktab192]</code></p>
+		<p>Sahifani istalgan joyga qo‘yish uchun shortkod: <code>[maktab192]</code></p>
 		<form method="post" action="options.php">
 			<?php settings_fields( 'maktab192' ); ?>
 			<table class="form-table" role="presentation">
@@ -133,14 +133,14 @@ function maktab192_settings_page() {
 					</tr>
 				<?php endforeach; ?>
 			</table>
-			<?php submit_button( 'Сақлаш' ); ?>
+			<?php submit_button( 'Saqlash' ); ?>
 		</form>
 	</div>
 	<?php
 }
 
 /* -------------------------------------------------------------------------
- * Аризалар (ота-оналар аризаси) — ички пост тури
+ * Arizalar (ota-onalar arizasi) — ichki post turi
  * ---------------------------------------------------------------------- */
 
 add_action(
@@ -150,11 +150,11 @@ add_action(
 			'maktab192_ariza',
 			array(
 				'labels'          => array(
-					'name'          => 'Аризалар',
-					'singular_name' => 'Ариза',
-					'edit_item'     => 'Аризани кўриш',
-					'search_items'  => 'Аризаларни қидириш',
-					'not_found'     => 'Ҳозирча ариза йўқ',
+					'name'          => 'Arizalar',
+					'singular_name' => 'Ariza',
+					'edit_item'     => 'Arizani ko‘rish',
+					'search_items'  => 'Arizalarni qidirish',
+					'not_found'     => 'Hozircha ariza yo‘q',
 				),
 				'public'          => false,
 				'show_ui'         => true,
@@ -175,11 +175,11 @@ add_action(
  */
 function maktab192_ariza_fields() {
 	return array(
-		'ota_ona' => 'Ота-она',
-		'telefon' => 'Телефон',
-		'farzand' => 'Фарзанд',
-		'sinf'    => 'Синф',
-		'savol'   => 'Савол',
+		'ota_ona' => 'Ota-ona',
+		'telefon' => 'Telefon',
+		'farzand' => 'Farzand',
+		'sinf'    => 'Sinf',
+		'savol'   => 'Savol',
 	);
 }
 
@@ -188,11 +188,11 @@ add_filter(
 	function () {
 		return array(
 			'cb'      => '<input type="checkbox" />',
-			'title'   => 'Ота-она',
-			'telefon' => 'Телефон',
-			'farzand' => 'Фарзанд',
-			'sinf'    => 'Синф',
-			'date'    => 'Сана',
+			'title'   => 'Ota-ona',
+			'telefon' => 'Telefon',
+			'farzand' => 'Farzand',
+			'sinf'    => 'Sinf',
+			'date'    => 'Sana',
 		);
 	}
 );
@@ -216,7 +216,7 @@ add_action(
 	function () {
 		add_meta_box(
 			'maktab192_ariza_info',
-			'Ариза маълумотлари',
+			'Ariza ma’lumotlari',
 			function ( $post ) {
 				echo '<table class="widefat striped"><tbody>';
 				foreach ( maktab192_ariza_fields() as $k => $label ) {
@@ -249,13 +249,13 @@ function maktab192_submit() {
 	$data['savol'] = mb_substr( $data['savol'], 0, 2000 );
 
 	if ( '' === $data['ota_ona'] || '' === $data['farzand'] || '' === $data['sinf'] || ! preg_match( '/^[+0-9 ()\-]{9,20}$/', $data['telefon'] ) ) {
-		wp_send_json_error( array( 'message' => 'Илтимос, барча майдонларни тўғри тўлдиринг.' ), 400 );
+		wp_send_json_error( array( 'message' => 'Iltimos, barcha maydonlarni to‘g‘ri to‘ldiring.' ), 400 );
 	}
 
-	// Бир IP дан дақиқасига биттадан ортиқ ариза қабул қилинмайди.
+	// Bir IP dan daqiqasiga bittadan ortiq ariza qabul qilinmaydi.
 	$ip_key = 'maktab192_rl_' . md5( isset( $_SERVER['REMOTE_ADDR'] ) ? sanitize_text_field( wp_unslash( $_SERVER['REMOTE_ADDR'] ) ) : '' );
 	if ( get_transient( $ip_key ) ) {
-		wp_send_json_error( array( 'message' => 'Илтимос, бир оздан кейин қайта уриниб кўринг.' ), 429 );
+		wp_send_json_error( array( 'message' => 'Iltimos, bir ozdan keyin qayta urinib ko‘ring.' ), 429 );
 	}
 	set_transient( $ip_key, 1, MINUTE_IN_SECONDS );
 
@@ -268,7 +268,7 @@ function maktab192_submit() {
 		true
 	);
 	if ( is_wp_error( $post_id ) ) {
-		wp_send_json_error( array( 'message' => 'Хатолик юз берди.' ), 500 );
+		wp_send_json_error( array( 'message' => 'Xatolik yuz berdi.' ), 500 );
 	}
 	foreach ( $data as $k => $v ) {
 		update_post_meta( $post_id, $k, $v );
@@ -288,7 +288,7 @@ add_action( 'wp_ajax_nopriv_maktab192_ariza', 'maktab192_submit' );
  */
 function maktab192_notify( $data, $post_id ) {
 	$o     = maktab192_options();
-	$lines = array( 'Янги ариза — 192-мактаб', '' );
+	$lines = array( 'Yangi ariza — 192-maktab', '' );
 	foreach ( maktab192_ariza_fields() as $k => $label ) {
 		if ( '' !== $data[ $k ] ) {
 			$lines[] = $label . ': ' . $data[ $k ];
@@ -299,7 +299,7 @@ function maktab192_notify( $data, $post_id ) {
 	$text    = implode( "\n", $lines );
 
 	$to = $o['notify_email'] ? $o['notify_email'] : get_option( 'admin_email' );
-	wp_mail( $to, 'Янги ариза: ' . $data['farzand'] . ' (' . $data['sinf'] . ')', $text );
+	wp_mail( $to, 'Yangi ariza: ' . $data['farzand'] . ' (' . $data['sinf'] . ')', $text );
 
 	if ( $o['tg_token'] && $o['tg_chat'] ) {
 		wp_remote_post(
@@ -317,7 +317,7 @@ function maktab192_notify( $data, $post_id ) {
 }
 
 /* -------------------------------------------------------------------------
- * Фронт: шорткод, ассетлар, тўлиқ саҳифа шаблони
+ * Front: shortkod, assetlar, to‘liq sahifa shabloni
  * ---------------------------------------------------------------------- */
 
 add_action(
@@ -367,7 +367,7 @@ function maktab192_is_full_page() {
 add_filter(
 	'theme_page_templates',
 	function ( $templates ) {
-		$templates[ MAKTAB192_TEMPLATE ] = '192-мактаб (тўлиқ саҳифа)';
+		$templates[ MAKTAB192_TEMPLATE ] = '192-maktab (to‘liq sahifa)';
 		return $templates;
 	}
 );
@@ -379,7 +379,7 @@ add_filter(
 	}
 );
 
-// Тўлиқ саҳифада мавзу (theme) стиллари дизайнни бузмаслиги учун уларни ўчирамиз.
+// To‘liq sahifada mavzu (theme) stillari dizaynni buzmasligi uchun ularni o‘chiramiz.
 add_action(
 	'wp_print_styles',
 	function () {
@@ -397,7 +397,7 @@ add_action(
 );
 
 /* -------------------------------------------------------------------------
- * Фаоллаштириш: мактаб саҳифасини яратиш
+ * Faollashtirish: maktab sahifasini yaratish
  * ---------------------------------------------------------------------- */
 
 register_activation_hook(
@@ -411,7 +411,7 @@ register_activation_hook(
 			array(
 				'post_type'    => 'page',
 				'post_status'  => 'publish',
-				'post_title'   => '192-мактаб',
+				'post_title'   => '192-maktab',
 				'post_name'    => 'maktab-192',
 				'post_content' => '<!-- wp:shortcode -->[maktab192]<!-- /wp:shortcode -->',
 			)
@@ -426,7 +426,7 @@ register_activation_hook(
 add_filter(
 	'plugin_action_links_' . plugin_basename( __FILE__ ),
 	function ( $links ) {
-		array_unshift( $links, '<a href="' . esc_url( admin_url( 'admin.php?page=maktab192' ) ) . '">Созламалар</a>' );
+		array_unshift( $links, '<a href="' . esc_url( admin_url( 'admin.php?page=maktab192' ) ) . '">Sozlamalar</a>' );
 		return $links;
 	}
 );
