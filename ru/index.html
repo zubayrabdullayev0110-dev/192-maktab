@@ -39,7 +39,7 @@
   .hand{font-family:Caveat,cursive;font-weight:700}
   .mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 90%,transparent 90%);padding:0 4px}
   .lead{color:var(--muted);font-size:18px;max-width:620px}
-  section{padding:84px 0}
+  section{padding:84px 0;scroll-margin-top:76px}
   .tagline{font-family:Caveat,cursive;font-size:26px;color:var(--red);display:block;margin-bottom:2px;transform:rotate(-2deg);transform-origin:left}
 
   .ruler{height:12px;background:repeating-linear-gradient(90deg,var(--wood) 0 2px,#d9a074 2px 14px),#d9a074}
@@ -227,7 +227,7 @@
     </nav>
     <div class="lang-sw" aria-label="Til / Язык / Language"><a href="../" hreflang="uz">UZ</a><a href="./" hreflang="ru" aria-current="page">RU</a><a href="../en/" hreflang="en">EN</a></div>
     <a href="#aloqa" class="btn btn-y">Оставить заявку</a>
-    <button class="burger" aria-label="Меню" aria-controls="menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <button class="burger" aria-label="Меню" aria-controls="menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',document.getElementById('menu').classList.toggle('open'))">☰</button>
   </div>
 </header>
 
@@ -427,7 +427,7 @@
     } catch { err.style.display = 'block'; }
     btn.disabled = false;
   });
-  document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
+  document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => { document.getElementById('menu').classList.remove('open'); document.querySelector('.burger').setAttribute('aria-expanded','false'); }));
 </script>
 </body>
 </html>

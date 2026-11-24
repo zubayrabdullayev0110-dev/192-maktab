@@ -39,7 +39,7 @@
   .hand{font-family:Caveat,cursive;font-weight:700}
   .mark{background:linear-gradient(transparent 58%,var(--yellow) 58%,var(--yellow) 90%,transparent 90%);padding:0 4px}
   .lead{color:var(--muted);font-size:18px;max-width:620px}
-  section{padding:84px 0}
+  section{padding:84px 0;scroll-margin-top:76px}
   .tagline{font-family:Caveat,cursive;font-size:26px;color:var(--red);display:block;margin-bottom:2px;transform:rotate(-2deg);transform-origin:left}
 
   .ruler{height:12px;background:repeating-linear-gradient(90deg,var(--wood) 0 2px,#d9a074 2px 14px),#d9a074}
@@ -227,7 +227,7 @@
     </nav>
     <div class="lang-sw" aria-label="Til / Язык / Language"><a href="./" hreflang="uz" aria-current="page">UZ</a><a href="ru/" hreflang="ru">RU</a><a href="en/" hreflang="en">EN</a></div>
     <a href="#aloqa" class="btn btn-y">Ariza qoldirish</a>
-    <button class="burger" aria-label="Menyu" aria-controls="menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <button class="burger" aria-label="Menyu" aria-controls="menu" aria-expanded="false" onclick="this.setAttribute('aria-expanded',document.getElementById('menu').classList.toggle('open'))">☰</button>
   </div>
 </header>
 
@@ -238,7 +238,7 @@
         <div>
           <div class="date">Tillarga ixtisoslashtirilgan o‘rta maxsus maktab</div>
           <h1>192-maktabga <span class="hand">xush kelibsiz!</span></h1>
-          <p>Shayxontohur tumanidagi oliy tizimdagi maktablardan biri. Xavfsiz muhit, oliy toifali ustozlar, ingliz va rus tillari, sport to‘garaklari — farzandingiz uchun barchasi bir joyda.</p>
+          <p>Shayxontohur tumanidagi yetakchi maktablardan biri. Xavfsiz muhit, oliy toifali ustozlar, ingliz va rus tillari, sport to‘garaklari — farzandingiz uchun barchasi bir joyda.</p>
           <div class="actions">
             <a href="#aloqa" class="btn btn-y">✏️ Farzandimni yozdirish</a>
             <a href="#kuzatuv" class="btn btn-w">Onlayn kuzatuv</a>
@@ -307,7 +307,7 @@
 <section id="ustozlar">
   <div class="wrap">
     <div class="head reveal">
-      <div><span class="tagline">Jamoamiz</span><h2>Eng oliy toifadagi <span class="mark">ustozlar</span></h2></div>
+      <div><span class="tagline">Jamoamiz</span><h2>Oliy toifali <span class="mark">ustozlar</span></h2></div>
       <p class="lead">Tajribali pedagoglar va psixologlar har bir bolaga alohida e’tibor qaratadi.</p>
     </div>
     <div class="teachers">
@@ -322,7 +322,7 @@
   <div class="wrap">
     <div class="head reveal">
       <div><span class="tagline">Dars jadvali</span><h2>Tillarga <span class="mark">ixtisoslashtirilgan</span></h2></div>
-      <p class="lead">O‘quvchilarimiz ingliz va rus tillarini chuqur o‘rganadi va mukammal egallaydi.</p>
+      <p class="lead">O‘quvchilarimiz ingliz va rus tillarini chuqur o‘rganib, ularni mukammal egallaydi.</p>
     </div>
     <div class="timetable reveal">
       <div class="tt-row"><div class="tt-lbl" style="color:var(--blue)">Aa</div><div><h3>Ingliz tili</h3><p>Xalqaro imtihonlarga tayyorgarlik va erkin muloqot ko‘nikmalari.</p></div><span class="chip" style="background:#dbe8ff">English</span></div>
@@ -385,7 +385,7 @@
         <p class="sr"><label>To‘ldirmang: <input name="bot-field"></label></p>
         <div class="row">
           <input required name="ota_ona" aria-label="Ota-onaning ismi" placeholder="Ota-onaning ismi" autocomplete="name">
-          <input required name="telefon" type="tel" aria-label="Telefon raqam" placeholder="+998 90 123 45 67" autocomplete="tel" pattern="[+0-9 ()-]{9,}">
+          <input required name="telefon" type="tel" aria-label="Telefon raqamingiz" placeholder="+998 90 123 45 67" autocomplete="tel" pattern="[+0-9 ()-]{9,}">
         </div>
         <div class="row">
           <input required name="farzand" aria-label="Farzandingiz ismi" placeholder="Farzandingiz ismi">
@@ -427,7 +427,7 @@
     } catch { err.style.display = 'block'; }
     btn.disabled = false;
   });
-  document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
+  document.querySelectorAll('.menu a').forEach(a => a.addEventListener('click', () => { document.getElementById('menu').classList.remove('open'); document.querySelector('.burger').setAttribute('aria-expanded','false'); }));
 </script>
 </body>
 </html>
