@@ -156,7 +156,7 @@ T = [
     ('<option value="">Sinf</option>', '<option value="">Класс</option>', '<option value="">Grade</option>'),
     ('aria-label="Savolingiz" placeholder="Savolingiz (ixtiyoriy)"', 'aria-label="Ваш вопрос" placeholder="Ваш вопрос (необязательно)"', 'aria-label="Your question" placeholder="Your question (optional)"'),
     ('Ariza yuborish →', 'Отправить заявку →', 'Send application →'),
-    ('Xatolik yuz berdi. Iltimos, qayta urinib ko‘ring.', 'Произошла ошибка. Пожалуйста, попробуйте ещё раз.', 'Something went wrong. Please try again.'),
+    ('Ariza yuborilmadi. Iltimos, maktabga bevosita tashrif buyuring — manzil va xarita shu sahifada.', 'Заявка не отправлена. Пожалуйста, приходите в школу лично — адрес и карта на этой странице.', 'The application could not be sent. Please visit the school in person — the address and map are on this page.'),
     ('Rahmat! Arizangiz qabul qilindi. Tez orada bog‘lanamiz.', 'Спасибо! Ваша заявка принята. Мы скоро свяжемся с вами.', 'Thank you! Your application has been received. We will be in touch soon.'),
     ('© 2026 192-maktab · Shayxontohur tumani', '© 2026 Школа №192 · Шайхантахурский район', '© 2026 School No. 192 · Shaykhontohur district'),
     ('Bu bizning maktab — 192-sonli o‘rta maxsus maktab', 'Это наша школа — специализированная школа №192', 'This is our school — Specialized Secondary School No. 192'),
@@ -186,7 +186,8 @@ def build(lang, col):
     s, n = re.subn(r'<option>(\d+)-sinf</option>', GRADE[lang], s)
     assert n == 11, n
     # Report any Uzbek Latin words left untranslated (o‘ / g‘ only occur in Uzbek).
-    left = sorted(set(re.findall(r'[^\s<>"]*[oOgG]‘[^\s<>"]*', s)))
+    visible = re.sub(r'(?s)<script type="application/ld\+json">.*?</script>', '', s)
+    left = sorted(set(re.findall(r'[^\s<>"]*[oOgG]‘[^\s<>"]*', visible)))
     if lang == 'en':
         left = [w for w in left if w not in ('Qo‘rg‘oncha', 'Ko‘kcha,')]
     if left:
