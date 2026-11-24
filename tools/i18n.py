@@ -184,7 +184,7 @@ T = [
      '<summary>How do I enroll my child?</summary><p>Fill in the application form below, call <a href="tel:+998998398604">+998 99 839 86 04</a> or visit the school during working hours.</p>'),
     # --- mobile quick bar ---
     ('aria-label="Tezkor havolalar"', 'aria-label="Быстрые ссылки"', 'aria-label="Quick links"'),
-    ('>📍 Yo‘l</a>', '>📍 Маршрут</a>', '>📍 Route</a>'),
+    ('(o‘quv ishlari bo‘yicha direktor o‘rinbosari)', '(завуч)', '(deputy head for academic affairs)'),
     ('📞 Qo‘ng‘iroq', '📞 Звонок', '📞 Call'),
     ('✏️ Ariza</a>', '✏️ Заявка</a>', '✏️ Apply</a>'),
 ]
